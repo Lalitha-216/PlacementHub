@@ -1,0 +1,40 @@
+package main;
+
+import java.util.Scanner;
+
+public class MainMenu {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        while (true) {
+
+            System.out.println("\n===== HireReady Placement System =====");
+            System.out.println("1 Admin Login");
+            System.out.println("2 Student Portal");
+            System.out.println("3 Exit");
+
+            System.out.print("Enter choice: ");
+            int choice = sc.nextInt();
+
+            switch (choice) {
+
+                case 1:
+                    AdminLogin.login();
+                    break;
+
+                case 2:
+                    StudentPortal.menu();
+                    break;
+
+                case 3:
+                    System.out.println("Exiting system...");
+                    System.exit(0);
+
+                default:
+                    System.out.println("Invalid choice");
+            }
+        }
+    }
+}
